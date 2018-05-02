@@ -23,7 +23,7 @@ The VMWare CSR1000v virtual machines run at between 2.4 and 3.4 Gb RAM on averag
 I will create all the VM's up front, but will introduce them into the lab when required. The VM's will be created as follows:
 (Based upon this <a href="https://github.com/craigeowen/my-network-ansible_playbooks/blob/master/2b.%20Laptop_Lab_JPEG.jpg">topology</a>)<br>
 
-<span class="underline">Virtual Machines</span> 
+<b><u>Virtual Machines</u></b> 
 
 <b>ansible host</b><br>
 RedHat1 (RHEL7)<br>

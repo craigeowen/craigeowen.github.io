@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Lab Environment"
-date: 2018-03-30
+date: 2018-04-06
 ---
 
 The great thing about building labs today is that it is pretty easy to virtualise most components. 
@@ -79,7 +79,7 @@ Lo1 - 1.0.30.1/32<br>
 Lo10 - 1.0.30.10/32<br>
 Lo100 - 1.0.30.100/32<br>
     
-<b>WAN Routers</b>
+<b>WAN Routers</b><br>
 WAN100 (Cisco CSR1000v - IoS 16.03.06)<br>
 GE1 IP Address - 10.10.10.254/24<br>
 GE2 IP Address - 100.20.0.10/24<br>

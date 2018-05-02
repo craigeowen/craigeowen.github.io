@@ -21,7 +21,7 @@ The Cisco routers specify 4Gb RAM, so that is what I have provisioned. When I wa
 The VMWare CSR1000v virtual machines run at between 2.4 and 3.4 Gb RAM on average, but then I am not really taxing them in performance terms in this lab.
 
 I will create all the VM's up front, but will introduce them into the lab when required. The VM's will be created as follows:
-<br> (Based upon this <a href="https://github.com/craigeowen/my-network-ansible_playbooks/blob/master/2b.%20Laptop_Lab_JPEG.jpg">topology</a>)<br>
+(Based upon this <a href="https://github.com/craigeowen/my-network-ansible_playbooks/blob/master/2b.%20Laptop_Lab_JPEG.jpg">topology</a>)<br>
 
 <span class="underline">Virtual Machines</span> 
 

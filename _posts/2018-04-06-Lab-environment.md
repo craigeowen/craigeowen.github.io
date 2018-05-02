@@ -20,6 +20,8 @@ This easily allows me to spin up the required VM's I need for this series of lab
 The Cisco routers specify 4Gb RAM, so that is what I have provisioned. When I was running this in Virtual Box I did try to provision less RAM per router, but I suffered significant stability issues. 
 The VMWare CSR1000v virtual machines run at between 2.4 and 3.4 Gb RAM on average, but then I am not really taxing them in performance terms in this lab.
 
+One of the biggest disappointments I came across during early lab trials, was the stability of ubuntu. Now don't get me wrong I like ubuntu and have used it as my linux distro of choice for many years. However for some reason it just kept freezing when  I used it as my ansible host...However it is fine for the normal lab endpoint machines. Therefore I opted to use Red Hat Enterprise 7 as Red Hat is the custodian for Ansible and also it is possible to use RHEL under a develpoer licensing model 
+
 I will create all the VM's up front, but will introduce them into the lab when required. The VM's will be created as follows:
 (Based upon this <a href="https://github.com/craigeowen/my-network-ansible_playbooks/blob/master/2b.%20Laptop_Lab_JPEG.jpg">topology</a>)<br>
 

@@ -12,43 +12,41 @@ subscription</a>
 Follow the install guide and make sure to add the dependent repos
    
 I also installed the following packages onto this node:
-<li>ansible</li>
+<li><font size="4">ansible</li>
 <li>putty</li>
-<li>TeamViewer</li>
+<li>TeamViewer</font></li>
     
 <b>Ubuntu</b> - site nodes (as I had already deployed these)<br>
-Standard ubuntu install running either 16.04LTS or 17.10, <br>
-please make sure ssh is set up.
+Standard ubuntu install running either 16.04LTS or 17.10, <br> please make sure ssh is set up!
 
 I made sure to start out with all the linux nodes connected to the
 VM Network port group in order to carry out updates as well as ensuring
 ssh works between the ansible admin node and each of the site nodes. <br>
-<b>This is really important as ansible will only work over ssh.</b>
+<b>This is really important as ansible will only work over ssh!!!</b>
  
  It is also a really good idea to test ansible against each node, as
- follows:
- 
- <i> Note: I will go into ansible in much more detial in blog posts, so at this stage 
- add an entry into the host file as follows (1 per server).</i>
+ follows: 
+ <i> Note: I will go into ansible in much more detial in future blog posts, so at this stage 
+ add an entry into the host file as follows(1 per server).</i>
  
  "<i>ip address of host</i>" ansible_user="<i>username</i>" ansible_password="<i>password</i>"<br>
+  <b>change valuses between "" to your own settings</b><br>
+ Example from my inventory (hosts.yml)<br>   
+ 172.16.20.2 ansible_user=test2 ansible_ssh_pass=p4ssw0rd!<br>
+ <br>
+ Procedure to confirm ansible is working correctly
    
- <i>change valuses between "" to your own settings</i><br>
-   
- <br>   
- 172.16.20.2 ansible_user=test2 ansible_ssh_pass=p4ssw0rd!<br><br>
-   
-    First ping to ip address to confirm connectivity<br>
+    First ping to ip address to confirm connectivity
     
-    Then ssh to linux host with username from above<br>
+    Then ssh to linux host with username from above
     
-    Return to Ansible host<br>
+    Return to Ansible host
     
-    cd to /etc/ansible<br>
+    cd to /etc/ansible
     
-    Then run the following: ansible all -m ping<br>
+    Then run the following: ansible all -m ping
 
-<b>Example</b><br>
+<b>Worked Example</b><br>
 
 <b>Ping host</b><br>
 [red1@localhost ~]$ ping 172.16.20.2<br>

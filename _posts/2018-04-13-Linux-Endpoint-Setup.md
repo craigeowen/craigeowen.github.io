@@ -2,13 +2,13 @@ I am writing about network automation. but there is definitely a need
 to use end hosts. So given that this entire lab is virtualised it is
 easy to spin up end nodes as test targets. 
 
-<b>Ansible admin node<b>
+<b>Ansible admin node</b>
 I started out by running ansible on an ubuntu linux distro. However I
 suffered endlessly from stability issues so switched to using RHEL7.
 This I sourced from RedHat using the free 
 <a href="https://developers.redhat.com/blog/2016/03/31/no-cost-rhel-developer-subscription-now-available/">RHEL Developers 
 subscription</a>
-<br/
+<br>
 Follow the install guide and make sure to add the dependent repos
    
 I also installed the following packages onto this node:
@@ -46,6 +46,9 @@ This is really important as ansible will only work over ssh.
     
     Then run the following: ansible all -m ping
 
+<b>Example</b><br>
+Ping host<br>
+<br>
 [red1@localhost ~]$ ping 172.16.20.2<b>
 PING 172.16.20.2 (172.16.20.2) 56(84) bytes of data.<br>
 64 bytes from 172.16.20.2: icmp_seq=1 ttl=60 time=1.00 ms<br>
@@ -55,6 +58,9 @@ PING 172.16.20.2 (172.16.20.2) 56(84) bytes of data.<br>
 --- 172.16.20.2 ping statistics ---<br>
 3 packets transmitted, 3 received, 0% packet loss, time 2001ms<br>
 rtt min/avg/max/mdev = 0.781/0.893/1.008/0.098 ms<br>
+   <br>
+SSH to host<br>
+   <br>
 [red1@localhost ~]$ ssh test2@172.16.20.2<br>
 The authenticity of host '172.16.20.2 (172.16.20.2)' can't be established.<br>
 ECDSA key fingerprint is SHA256:F3Zjwy3FUe0z2+6bck9Kr/SVWDL6UlDR60TVYdNkWTU.<br>
@@ -72,12 +78,20 @@ Welcome to Ubuntu 16.04.4 LTS (GNU/Linux 4.13.0-38-generic x86_64)
 0 updates are security updates.
 
 Last login: Wed Apr 18 08:49:54 2018 from 172.16.10.20<br>
+Return to Ansible host<br>
+<br>
 test2@test2:~$ exit<br>
 logout<br>
 Connection to 172.16.20.2 closed.<br>
 [red1@localhost ~]$ <br>
 [red1@localhost ~]$ <br>
+<br>
+Change directory to /etc/ansible<br>
+<br>
 [red1@localhost ~]$ cd /etc/ansible<br>
+<br>
+Run ansible ping<br>
+<br>
 [red1@localhost ansible]$ ansible all -m ping<br>
 172.16.20.2 | SUCCESS => {<br>
     "changed": false, <br>

@@ -12,10 +12,10 @@ subscription</a>
 Follow the install guide and make sure to add the dependent repos
    
 I also installed the following packages onto this node:
-<font size="8">
+<font size="6">
 <li>ansible</li>
 <li>putty</li>
-<li>TeamViewer></li>
+<li>TeamViewer</li>
 </font>
     
 <b>Ubuntu</b> - site nodes (as I had already deployed these)<br>
@@ -26,20 +26,22 @@ VM Network port group in order to carry out updates as well as ensuring
 ssh works between the ansible admin node and each of the site nodes. <br>
 <b>This is really important as ansible will only work over ssh!!!</b><br>
  <br>
- It is also a really good idea to test ansible against each node, as
- follows:<br> 
+ It is also a really good idea to test ansible against each node. So it is time to create a first basic inventory file and playbook to allow basic testing, as follows:<br>
+<b><font colour="green" size="4">Create a host.yml</font<>/b><br>
   "<i>ip address of host</i>" ansible_user="<i>username</i>" ansible_password="<i>password</i>"<br>
   <b>change valuses between "" to your own settings</b><br>
   
-  <i> Note: I will go into ansible in much more detial in future blog posts, so at this stage 
+  <i> Note: I will go into ansible in much more detial in future blog posts. But just note that is is not possible to test against a cisco router directley from the linux cli so it is necassary to use an ansible playbook, so at this stage 
  add an entry into the host file as follows(1 per server).</i><br>
  
  <!-- I should add a screeshot of hosts.yml -->
   Example from my inventory (hosts.yml)<br>   
  172.16.20.2 ansible_user=test2 ansible_ssh_pass=p4ssw0rd!<br>
 <!-- screenshot to add above -->
+<b><font colour="green" size="4">Create a basic palybook - cisco_ping.yml</font<>/b><br>
+ <!-- add cisco ping files details -->
 <br>
- <font color="blue">Procedure to confirm ansible is working correctly</font><br>
+ <font color="blue">Procedure to confirm ansible is working correctly</font>
 1. First ping to ip address to confirm connectivity
 <br>    
 2. Then ssh to linux host with username from above

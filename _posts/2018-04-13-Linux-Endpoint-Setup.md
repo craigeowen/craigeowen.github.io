@@ -1,22 +1,22 @@
 I am writing about network automation. but there is definitely a need
 to use end hosts. So given that this entire lab is virtualised it is
-easy to spin up end nodes as test targets. 
+easy to spin up end nodes as test targets. So this lab will prepare the groundwork by creating the linux machine hosting the ansible applicaiton, and the site linux endpoints...please refer to last weeks blog for detials of the <a href="https://craigeowen.github.io/blog/2018/04/06/Lab-environment">lab environment</a>
 
-<b>Ansible admin node</b><br>
-I started out by running ansible on an ubuntu linux distro. However I
-suffered endlessly from stability issues so switched to using RHEL7.
-This I sourced from RedHat using the free 
-<a href="https://developers.redhat.com/blog/2016/03/31/no-cost-rhel-developer-subscription-now-available/">RHEL Developers 
-subscription</a>
-<br>
-Follow the install guide and make sure to add the dependent repos
-   
-I also installed the following packages onto this node:
-<font size="4">
-<li>ansible</li>
-<li>putty</li>
-<li>TeamViewer</li>
-</font>
+   <b>Ansible admin node</b><br>
+   I started out by running ansible on an ubuntu linux distro. However I
+   suffered endlessly from stability issues so switched to using RHEL7.
+   This I sourced from RedHat using the free 
+   <a href="https://developers.redhat.com/blog/2016/03/31/no-cost-rhel-developer-subscription-now-available/">RHEL Developers 
+   subscription</a>
+   <br>
+   Follow the install guide and make sure to add the dependent repos
+
+   I also installed the following packages onto this node:
+   <font size="4">
+   <li>ansible</li>
+   <li>putty</li>
+   <li>TeamViewer</li>
+   </font>
     
 <b>Ubuntu</b> - site nodes (as I had already deployed these)<br>
 Standard ubuntu install running either 16.04LTS or 17.10, please make sure ssh is set up!

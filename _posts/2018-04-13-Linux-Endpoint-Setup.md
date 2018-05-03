@@ -31,20 +31,22 @@ ssh works between the ansible admin node and each of the site nodes. <br>
  <i> Note: I will go into ansible in much more detial in blog posts, so at this stage 
  add an entry into the host file as follows (1 per server).</i>
  
- <ip address> ansible_user=<username> ansible_password=<password><br>
- <i>change valuses between <> to your own settings</i><br>
- <br>   
- 172.16.20.2 ansible_user=test2 ansible_ssh_pass=p4ssw0rd!<br>
+ "<i>ip address of host</i>" ansible_user="<i>username</i>" ansible_password="<i>password</i>"<br>
    
-    First ping to ip address to confirm connectivity
+ <i>change valuses between "" to your own settings</i><br>
+   
+ <br>   
+ 172.16.20.2 ansible_user=test2 ansible_ssh_pass=p4ssw0rd!<br><br>
+   
+    First ping to ip address to confirm connectivity<br>
     
-    Then ssh to linux host with username from above
+    Then ssh to linux host with username from above<br>
     
-    Return to Ansible host
+    Return to Ansible host<br>
     
-    cd to /etc/ansible
+    cd to /etc/ansible<br>
     
-    Then run the following: ansible all -m ping
+    Then run the following: ansible all -m ping<br>
 
 <b>Example</b><br>
 
@@ -98,5 +100,6 @@ Connection to 172.16.20.2 closed.<br>
 }<br>
 [red1@localhost ansible]$<br> 
 [red1@localhost ansible]$ <br>
-
+<br>
 <b>Success!!!</b>
+<br>

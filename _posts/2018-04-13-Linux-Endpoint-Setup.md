@@ -9,22 +9,24 @@ easy to spin up end nodes as test targets. So this lab will prepare the groundwo
    <a href="https://developers.redhat.com/blog/2016/03/31/no-cost-rhel-developer-subscription-now-available/">RHEL Developers 
    subscription</a>
    <br>
-   Follow the install guide and make sure to add the dependent repos
-
+   Follow the install guide and make sure to add the dependent repos.
+   <br>
    I installed the following packages onto this node:
    <font size="3">
    <li>ansible - as this is the machine that will run ansible!</li>
    <li>putty - ssh client</li>
    <li>TeamViewer - allow remote control of the machine at a later date</li>
    </font>
-</blockquote>    
-<b>Ubuntu</b> - site nodes (as I had already deployed these)<br>
-Standard ubuntu install running either 16.04LTS or 17.10, please make sure ssh is set up!
+</blockquote> 
+<br>
+<blockquote>
+   <b>Ubuntu</b> - site nodes (as I had already deployed these)<br>
+   Standard ubuntu install running either 16.04LTS or 17.10, please make sure ssh is set up!
 
-I made sure to start out with all the linux nodes connected to the
-VM Network port group in order to carry out updates as well as ensuring
-ssh works between the ansible admin node and each of the site nodes. <br>
-<b>This is really important as ansible will only work over ssh!!!</b><br>
+   I made sure to start out with all the linux nodes connected to the
+   VM Network port group in order to carry out updates as well as ensuring
+   ssh works between the ansible admin node and each of the site nodes. <br>
+   <b>This is really important as ansible will only work over ssh!!!</b><br>
  <br>
  It is also a really good idea to test ansible against each node. So it is time to create a first basic inventory file to allow basic testing, as follows:<br>
 <font size="6" color="green">Create a host.yml file</font><br>

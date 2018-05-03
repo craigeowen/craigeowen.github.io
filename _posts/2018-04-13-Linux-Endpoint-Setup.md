@@ -12,14 +12,14 @@ subscription</a>
 Follow the install guide and make sure to add the dependent repos
    
 I also installed the following packages onto this node:
-<font size="4">
+<font size="8">
 <li>ansible</li>
 <li>putty</li>
 <li>TeamViewer></li>
 </font>
     
 <b>Ubuntu</b> - site nodes (as I had already deployed these)<br>
-Standard ubuntu install running either 16.04LTS or 17.10, <br> please make sure ssh is set up!
+Standard ubuntu install running either 16.04LTS or 17.10, please make sure ssh is set up!
 
 I made sure to start out with all the linux nodes connected to the
 VM Network port group in order to carry out updates as well as ensuring
@@ -28,18 +28,18 @@ ssh works between the ansible admin node and each of the site nodes. <br>
  <br>
  It is also a really good idea to test ansible against each node, as
  follows:<br> 
- <i> Note: I will go into ansible in much more detial in future blog posts, so at this stage 
- add an entry into the host file as follows(1 per server).</i><br>
- <!-- I should add a screeshot of hosts.yml -->
- 
- "<i>ip address of host</i>" ansible_user="<i>username</i>" ansible_password="<i>password</i>"<br>
+  "<i>ip address of host</i>" ansible_user="<i>username</i>" ansible_password="<i>password</i>"<br>
   <b>change valuses between "" to your own settings</b><br>
+  
+  <i> Note: I will go into ansible in much more detial in future blog posts, so at this stage 
+ add an entry into the host file as follows(1 per server).</i><br>
  
- Example from my inventory (hosts.yml)<br>   
+ <!-- I should add a screeshot of hosts.yml -->
+  Example from my inventory (hosts.yml)<br>   
  172.16.20.2 ansible_user=test2 ansible_ssh_pass=p4ssw0rd!<br>
- <br>
- Procedure to confirm ansible is working correctly<br>
-<br>   
+<!-- screenshot to add above -->
+<br>
+ <font color="blue">Procedure to confirm ansible is working correctly</font><br>
 1. First ping to ip address to confirm connectivity
 <br>    
 2. Then ssh to linux host with username from above
@@ -50,8 +50,8 @@ ssh works between the ansible admin node and each of the site nodes. <br>
 <br>    
 5. Then run the following: ansible all -m ping
 <br>
-<b>Worked Example</b><br>
-
+<br>
+<b>worked Example</b><br>
 <b>1. Ping host</b><br>
 [red1@localhost ~]$ ping 172.16.20.2<br>
 PING 172.16.20.2 (172.16.20.2) 56(84) bytes of data.<br>
@@ -103,5 +103,5 @@ Connection to 172.16.20.2 closed.<br>
 [red1@localhost ansible]$<br> 
 [red1@localhost ansible]$ <br>
 <br>
-<b>Success!!!</b>
+<b><font size="10" color="blue">Success!!!</font></b>
 <br>

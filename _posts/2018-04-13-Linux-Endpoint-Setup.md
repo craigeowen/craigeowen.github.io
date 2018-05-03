@@ -17,9 +17,7 @@ easy to spin up end nodes as test targets. So this lab will prepare the groundwo
    <li>putty - ssh client</li>
    <li>TeamViewer - allow remote control of the machine at a later date</li>
    </font>
-</blockquote> 
-<br>
-<blockquote>
+
    <b>Ubuntu</b> - site nodes (as I had already deployed these)<br>
    Standard ubuntu install running either 16.04LTS or 17.10, please make sure ssh is set up!
 

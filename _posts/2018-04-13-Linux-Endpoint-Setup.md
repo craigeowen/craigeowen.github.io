@@ -27,11 +27,11 @@ ssh works between the ansible admin node and each of the site nodes. <br>
 <b>This is really important as ansible will only work over ssh!!!</b><br>
  <br>
  It is also a really good idea to test ansible against each node. So it is time to create a first basic inventory file to allow basic testing, as follows:<br>
-<b><font size="6" color="green">Create a host.yml file</font></b><br>
-  "<i>ip address of host</i>" ansible_user="<i>username</i>" ansible_password="<i>password</i>"<br>
-  <b>change values between <font clour="red">""</font> to your own settings</b><br>
+<font size="6" color="green">Create a host.yml file</font><br>
+"<i>ip address of host</i>" ansible_user="<i>username</i>" ansible_password="<i>password</i>"<br>
+<b>change values between <font clour="red">""</font> to your own settings</b><br>
   
-  <i> Note: I will go into ansible in much more detial in future blog posts, so at this stage add an entry into the host file as follows(1 per server).</i><br>
+<i> Note: I will go into ansible in much more detial in future blog posts, so at this stage add an entry into the host file as follows(1 per server).</i><br>
  
  <!-- I should add a screeshot of hosts.yml -->
   Example from my inventory (hosts.yml)<br>   

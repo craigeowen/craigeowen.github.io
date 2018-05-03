@@ -1,23 +1,25 @@
 I am writing about network automation. but there is definitely a need
- to use end hosts. So given that this entire lab is virtualised it is
- easy to spin up end nodes as test targets. 
+to use end hosts. So given that this entire lab is virtualised it is
+easy to spin up end nodes as test targets. 
 
-Ansible admin node
-  I started ot by running ansible on an ubuntu linux distro. However I
-   suffered endlessly from stability issues so switched to using RHEL7.
-   This I sourced from RedHat using the free RHEL Developers 
-   subscription
-   https://developers.redhat.com/blog/2016/03/31/no-cost-rhel-developer-subscription-now-available/
-   Follow the install guide and make sure to add the dependent repos
+<b>Ansible admin node<b>
+I started out by running ansible on an ubuntu linux distro. However I
+suffered endlessly from stability issues so switched to using RHEL7.
+This I sourced from RedHat using the free 
+<a href="https://developers.redhat.com/blog/2016/03/31/no-cost-rhel-developer-subscription-now-available/">RHEL Developers 
+subscription</a>
+<br/
+Follow the install guide and make sure to add the dependent repos
    
-   I also installed the following packages onto this node:
-     ansible
-     putty
-     TeamViewer
+I also installed the following packages onto this node:
+<li>ansible</li>
+<li>putty</li>
+<li>TeamViewer</li>
     
-Ubuntu - site nodes (as I had already deployed these)
-standard ubuntu install, plus make sure ssh is set up.
-  
+<b>Ubuntu</b> - site nodes (as I had already deployed these)<br>
+Standard ubuntu install running either 16.04LTS or 17.10, <br>
+please make sure ssh is set up.
+
 I made sure to start out with all the linux nodes connected to the
 VM Network port group in order to carry out updates as well as ensuring
 ssh works between the ansible admin node and each of the site nodes. 
@@ -26,57 +28,62 @@ This is really important as ansible will only work over ssh.
  It is also a really good idea to test ansible against each node, as
  follows:
  
-   I will go into ansible in subsequent sections, so at this stage 
-   add an entry into the host file as follows (1 per server).
-    <ip address> ansible_user=<username> ansible_password=<password>
-    change valuses between <> to your own settings
+ I will go into ansible in much more detial in blog posts, so at this stage 
+ add an entry into the host file as follows (1 per server).
+ 
+ <ip address> ansible_user=<username> ansible_password=<password>
+ <i>change valuses between <> to your own settings</i>
     
-    172.16.20.2 ansible_user=test2 ansible_ssh_pass=p4ssw0rd!
+ 172.16.20.2 ansible_user=test2 ansible_ssh_pass=p4ssw0rd!
     
-    Now ping to ip address to confirm connectivity
+    First ping to ip address to confirm connectivity
     
-    Now ssh to linux host with username from above
+    Then ssh to linux host with username from above
+    
+    Return to Ansible host
+    
     cd to /etc/ansible
+    
     Then run the following: ansible all -m ping
 
-[red1@localhost ~]$ ping 172.16.20.2
-PING 172.16.20.2 (172.16.20.2) 56(84) bytes of data.
-64 bytes from 172.16.20.2: icmp_seq=1 ttl=60 time=1.00 ms
-64 bytes from 172.16.20.2: icmp_seq=2 ttl=60 time=0.892 ms
-64 bytes from 172.16.20.2: icmp_seq=3 ttl=60 time=0.781 ms
-^C
---- 172.16.20.2 ping statistics ---
-3 packets transmitted, 3 received, 0% packet loss, time 2001ms
-rtt min/avg/max/mdev = 0.781/0.893/1.008/0.098 ms
-[red1@localhost ~]$ ssh test2@172.16.20.2
-The authenticity of host '172.16.20.2 (172.16.20.2)' can't be established.
-ECDSA key fingerprint is SHA256:F3Zjwy3FUe0z2+6bck9Kr/SVWDL6UlDR60TVYdNkWTU.
-ECDSA key fingerprint is MD5:0f:22:41:33:50:ff:10:2f:5d:c8:5a:fe:02:af:ca:14.
-Are you sure you want to continue connecting (yes/no)? yes
-Warning: Permanently added '172.16.20.2' (ECDSA) to the list of known hosts.
-test2@172.16.20.2's password: 
+[red1@localhost ~]$ ping 172.16.20.2<b>
+PING 172.16.20.2 (172.16.20.2) 56(84) bytes of data.<br>
+64 bytes from 172.16.20.2: icmp_seq=1 ttl=60 time=1.00 ms<br>
+64 bytes from 172.16.20.2: icmp_seq=2 ttl=60 time=0.892 ms<br>
+64 bytes from 172.16.20.2: icmp_seq=3 ttl=60 time=0.781 ms<br>
+^C<br>
+--- 172.16.20.2 ping statistics ---<br>
+3 packets transmitted, 3 received, 0% packet loss, time 2001ms<br>
+rtt min/avg/max/mdev = 0.781/0.893/1.008/0.098 ms<br>
+[red1@localhost ~]$ ssh test2@172.16.20.2<br>
+The authenticity of host '172.16.20.2 (172.16.20.2)' can't be established.<br>
+ECDSA key fingerprint is SHA256:F3Zjwy3FUe0z2+6bck9Kr/SVWDL6UlDR60TVYdNkWTU.<br>
+ECDSA key fingerprint is MD5:0f:22:41:33:50:ff:10:2f:5d:c8:5a:fe:02:af:ca:14.<br>
+Are you sure you want to continue connecting (yes/no)? yes<br>
+Warning: Permanently added '172.16.20.2' (ECDSA) to the list of known hosts.<br>
+test2@172.16.20.2's password: <br>
 Welcome to Ubuntu 16.04.4 LTS (GNU/Linux 4.13.0-38-generic x86_64)
 
  * Documentation:  https://help.ubuntu.com
  * Management:     https://landscape.canonical.com
  * Support:        https://ubuntu.com/advantage
 
-81 packages can be updated.
+81 packages can be updated.<br>
 0 updates are security updates.
 
-Last login: Wed Apr 18 08:49:54 2018 from 172.16.10.20
-test2@test2:~$ exit
-logout
-Connection to 172.16.20.2 closed.
-[red1@localhost ~]$ 
-[red1@localhost ~]$ 
-[red1@localhost ~]$ cd /etc/ansible
-[red1@localhost ansible]$ ansible all -m ping
-172.16.20.2 | SUCCESS => {
-    "changed": false, 
+Last login: Wed Apr 18 08:49:54 2018 from 172.16.10.20<br>
+test2@test2:~$ exit<br>
+logout<br>
+Connection to 172.16.20.2 closed.<br>
+[red1@localhost ~]$ <br>
+[red1@localhost ~]$ <br>
+[red1@localhost ~]$ cd /etc/ansible<br>
+[red1@localhost ansible]$ ansible all -m ping<br>
+172.16.20.2 | SUCCESS => {<br>
+    "changed": false, <br>
     "ping": "pong"
-}
-[red1@localhost ansible]$ 
-[red1@localhost ansible]$ 
+}<br>
+[red1@localhost ansible]$<br> 
+[red1@localhost ansible]$ <br>
 
 Success!!!

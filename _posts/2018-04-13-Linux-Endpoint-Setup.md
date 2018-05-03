@@ -17,16 +17,16 @@ easy to spin up end nodes as test targets. So this lab will prepare the groundwo
    <li>putty - ssh client</li>
    <li>TeamViewer - allow remote control of the machine at a later date</li>
    </font>
-
-   <b>Ubuntu</b> - site nodes (as I had already deployed these)<br>
+   <br>
+   <b>Ubuntu - site nodes</b> (as I had already deployed these)<br>
    Standard ubuntu install running either 16.04LTS or 17.10, please make sure ssh is set up!
-
+   <br>
    I made sure to start out with all the linux nodes connected to the
-   VM Network port group in order to carry out updates as well as ensuring
+   VM Network port group in order to carry out updates and quickly test
    ssh works between the ansible admin node and each of the site nodes. <br>
    <b>This is really important as ansible will only work over ssh!!!</b><br>
 </blockquote>
- <br>
+ 
  It is also a really good idea to test ansible against each node. So it is time to create a first basic inventory file to allow basic testing, as follows:<br>
 <font size="6" color="green">Create a host.yml file</font><br>
 "<i>ip address of host</i>" ansible_user="<i>username</i>" ansible_password="<i>password</i>"<br>

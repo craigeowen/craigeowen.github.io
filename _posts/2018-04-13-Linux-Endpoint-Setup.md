@@ -12,9 +12,9 @@ easy to spin up end nodes as test targets. So this lab will prepare the groundwo
    Follow the install guide and make sure to add the dependent repos
 
    I installed the following packages onto this node:
-   <font size="5">
+   <font size="3">
    <li>ansible - as this is the machine that will run ansible!</li>
-   <li>putty - the de facto ssh client in my opinion</li>
+   <li>putty - ssh client</li>
    <li>TeamViewer - allow remote control of the machine at a later date</li>
    </font>
 </blockquote>    

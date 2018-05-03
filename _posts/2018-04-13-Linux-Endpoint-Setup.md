@@ -27,7 +27,7 @@ ssh works between the ansible admin node and each of the site nodes. <br>
 <b>This is really important as ansible will only work over ssh!!!</b><br>
  <br>
  It is also a really good idea to test ansible against each node. So it is time to create a first basic inventory file to allow basic testing, as follows:<br>
-<b><font colour="green" size="4">Create a host.yml file</font></b><br>
+<b><font size="6" color="green">Create a host.yml file</font></b><br>
   "<i>ip address of host</i>" ansible_user="<i>username</i>" ansible_password="<i>password</i>"<br>
   <b>change values between <font clour="red">""</font> to your own settings</b><br>
   
@@ -37,8 +37,9 @@ ssh works between the ansible admin node and each of the site nodes. <br>
   Example from my inventory (hosts.yml)<br>   
  172.16.20.2 ansible_user=test2 ansible_ssh_pass=p4ssw0rd!<br>
 <!-- screenshot to add above -->
-<br>
- <font size="4" color="blue">Procedure to confirm ansible is working correctly</font>
+<!-- blank -->
+<font size="6" color="blue">Procedure to confirm ansible is working correctly</font>
+<font size="4" colour=blue">
 1. First ping to ip address to confirm connectivity
 <br>    
 2. Then ssh to linux host with username from above
@@ -48,10 +49,10 @@ ssh works between the ansible admin node and each of the site nodes. <br>
 4. cd to /etc/ansible
 <br>    
 5. Then from the ansible host cli run the following: ansible all -m ping
-<br>
+</font>
 <br>
 
-<b>worked Example</b><br>
+<b>Worked Example</b><br>
 <b>1. Ping host</b><br>
 [red1@localhost ~]$ ping 172.16.20.2<br>
 PING 172.16.20.2 (172.16.20.2) 56(84) bytes of data.<br>

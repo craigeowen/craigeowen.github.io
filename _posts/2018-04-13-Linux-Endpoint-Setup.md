@@ -31,14 +31,15 @@ easy to spin up end nodes as test targets. So this lab will prepare the groundwo
 Now that these linux machines are set up and communicating on the VM Network Port Group, we can test that Ansible is working by doing some very basic tests. So it is time to create a first basic inventory file to allow basic testing between the RHEL7 ansible host machine and the ubuntu endpoints, as follows:<br>
 <font size="5" color="blue">Create a host.yml file</font>
 <blockquote>
-"<i>ip address of host</i>" ansible_user="<i>username</i>" ansible_password="<i>password</i>"<br>
-<b>change values between <font clour="red">""</font> to your own settings</b><br>
-  
+<font color="red">"<i>ip address of host</i>"</font> ansible_user=<font color="red">"<i>username</i>"</font> ansible_password=<font color="red">"<i>password</i>"</font><br>
+<b>change italic values between <font color="red">""</font> to your own settings</b><br>
+<br>  
 <i> Note: I will go into ansible in much more detial in future blog posts, so at this stage add an entry into the host file as follows(1 per server).</i><br>
  
- <!-- I should add a screeshot of hosts.yml -->
-  Example from my inventory (hosts.yml)<br>   
- 172.16.20.2 ansible_user=test2 ansible_ssh_pass=p4ssw0rd!<br>
+<!-- I should add a screeshot of hosts.yml -->
+Example from my inventory (hosts.yml)<br>
+<br>
+172.16.20.2 ansible_user=test2 ansible_ssh_pass=p4ssw0rd!<br>
 <!-- screenshot to add above -->
 </blockquote>
 <!-- blank -->

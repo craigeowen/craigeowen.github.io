@@ -40,9 +40,10 @@ Now that these linux machines are set up and communicating on the VM Network Por
 Example from my inventory (hosts.yml)<br>
 <br>
 172.16.20.2 ansible_user=test2 ansible_ssh_pass=p4ssw0rd!<br>
+   <br>
 <!-- screenshot to add above -->
 <!-- <img src="img_girl.jpg" alt="Girl in a jacket" style="width:500px;height:600px;"> -->
-<img src="/assets/lab1-hostsfile.PNG" alt="My hosts.yml Inventory File" style="width:800px;height:300px;">
+<img src="/assets/lab1-hostsfile.PNG" alt="My hosts.yml Inventory File" style="width:400px;height:150px;">
 </blockquote>
 <!-- blank -->
 <font size="5" color="blue">Procedure to confirm ansible is working correctly</font>

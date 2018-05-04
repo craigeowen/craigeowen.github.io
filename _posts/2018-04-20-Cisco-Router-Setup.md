@@ -61,7 +61,7 @@ The final desing has the RHEL7 ansible host in the VLAN10 port group together wi
 </blockquote>
 Once ssh access works, then the router is ready.
 
-We will start with a single router and build out, using ansible as much 
+We will start with Site 1 and build out, using ansible as much 
 as possible as we go. Sometimes there will be a need to log into the 
 router instance via VMWare console, but I will minimise this as much 
 as possible.

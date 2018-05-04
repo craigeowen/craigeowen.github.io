@@ -1,6 +1,6 @@
 I am writing about network automation. but there is definitely a need
 to use end hosts. So given that this entire lab is virtualised it is
-easy to spin up end nodes as test targets. So this lab will prepare the groundwork by creating the linux machine hosting the ansible applicaiton, and the site linux endpoints...please refer to last weeks blog for detials of the <a href="https://craigeowen.github.io/blog/2018/04/06/Lab-environment">lab environment</a><br>
+easy to spin up end nodes as test targets. So this lab will prepare the groundwork by creating the linux machine hosting the ansible applicaiton, and the site linux endpoints...please refer to last weeks blog for details of the <a href="https://craigeowen.github.io/blog/2018/04/06/Lab-environment">lab environment</a><br>
 <font size="5" color="blue">Linux Initial Setup</font>
 <blockquote>
    <b>Ansible admin node</b><br>
@@ -34,8 +34,8 @@ Now that these linux machines are set up and communicating on the VM Network Por
 <font color="red">"<i>ip address of host</i>"</font> ansible_user=<font color="red">"<i>username</i>"</font> ansible_password=<font color="red">"<i>password</i>"</font><br>
 <b>change italic values between <font color="red">""</font> to your own settings</b><br>
 <br>  
-<i> Note: I will go into ansible in much more detial in future blog posts, so at this stage add an entry into the host file as follows(1 per server).</i><br>
- 
+<i> Note: I will go into ansible in much more detial in future blog posts, so at this stage add an entry into the host file as follows(1 entry per server).</i><br>
+<br> 
 <!-- I should add a screeshot of hosts.yml -->
 Example from my inventory (hosts.yml)<br>
 <br>
@@ -56,8 +56,8 @@ Example from my inventory (hosts.yml)<br>
 5. Then from the ansible host cli run the following: ansible all -m ping
 </blockquote>
 <br>
-
-<b>Worked Example</b><br>
+Below is an example of running a successful Ansible test against an ubuntu endpoint.<br>
+<font size="5" color="blue">Worked Example</font><br>
 <b>1. Ping host</b><br>
 [red1@localhost ~]$ ping 172.16.20.2<br>
 PING 172.16.20.2 (172.16.20.2) 56(84) bytes of data.<br>

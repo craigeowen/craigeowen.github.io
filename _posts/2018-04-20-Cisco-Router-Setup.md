@@ -7,13 +7,11 @@ Natively ansible connects to a host on ssh and then utilises the python interpre
 However this is not possible on a Cisco router so on the one hand it is less elegent and has a more limited set of modules, 
 on the other I think it makes for more streamlined and easier playbooks.
 But it does mean a more hands-on approach to the intial router setup...before we can get to work using Ansible with the routers.
-
-<-- 
 <font size="5" color="blue">Provisioning the CSR1000v in esxi</font>
 <blockquote>
    <a href="https://www.cisco.com/c/en/us/td/docs/routers/csr1000/software/configuration/b_CSR1000v_Configuration_Guide/b_CSR1000v_Configuration_Guide_chapter_011.pdf">Cisco CSR1000v Install Guide for esxi Environment</a>
 </blockquote>
- In order to set up the router with the minimum configuraiton to allow ssh communicaiton from the Ansible Host machine, the configuration below must be applied to each CSR1000v router.<br>M.<br>
+ In order to set up the router with the minimum configuraiton to allow ssh communicaiton from the Ansible Host machine, the configuration below must be applied to each CSR1000v router.<br>
 My appraoch to provisioning the routers is to do them on a site by site basis as follows:
 <li>Site 1</li>
 <li>WAN100</li>
@@ -21,34 +19,33 @@ My appraoch to provisioning the routers is to do them on a site by site basis as
 <li>Site 2</li>
 <li>WAN300</li>
 <li>Site 3</li>
-<br>
 So for this lab I will be provisioning and testing CSR10 and CSR11.
 <br>
 <font size="5" color="blue">CSR1000v Base configuration</font>
 <blockquote>
 console
- - configure hostname
-   router(config)# hostname <font color="red">"<i>csr10</i>"</font>
- - configure domain
-   csr10(config)# ip domain-name <font color="red">"<i>test.com</i>"</font>
- - configure username and password
-   csr10(config)#username "cisco" privilege 15 secret <font color="red">"<i>p4ssw0rd!</i>"</font>
- - configure the enable secret password
-   csr10(config)#enable secret <font color="red">"<i>p4ssw0rd!!!</i>"</font>
- - configure the ethernet interface
-   csr10(config)#interface gigabitethernet1
-   csr10(config-if)#ip address <font color="red">"<i>x.x.x.x 255.x.x.x</i>"</font>
-   csr10(config-if)# no shut
- - configre rsa crypto key
-   csr10(config)#crypto key generate rsa
- - configure ssh access to vty
-   csr10(config)#line vty 0 4
-   csr10(config-line)#transport input ssh
-   csr10(config-line)#login local
- - ssh
-   csr10(config)#ip ssh version 2
-   csr10(config)#ip ssh authentication-retries 2
-   csr10(config)#ip ssh time-out 60
+ - configure hostname<br>
+   router(config)# hostname <font color="red">"<i>csr10</i>"</font><br>
+ - configure domain<br>
+   csr10(config)# ip domain-name <font color="red">"<i>test.com</i>"</font><br>
+ - configure username and password<br>
+   csr10(config)#username "cisco" privilege 15 secret <font color="red">"<i>p4ssw0rd!</i>"</font><br>
+ - configure the enable secret password<br>
+   csr10(config)#enable secret <font color="red">"<i>p4ssw0rd!!!</i>"</font><br>
+ - configure the ethernet interface<br>
+   csr10(config)#interface gigabitethernet1<br>
+   csr10(config-if)#ip address <font color="red">"<i>x.x.x.x 255.x.x.x</i>"</font><br>
+   csr10(config-if)# no shut<br>
+ - configre rsa crypto key<br>
+   csr10(config)#crypto key generate rsa<br>
+ - configure ssh access to vty<br>
+   csr10(config)#line vty 0 4<br>
+   csr10(config-line)#transport input ssh<br>
+   csr10(config-line)#login local<br>
+ - ssh<br>
+   csr10(config)#ip ssh version 2<br>
+   csr10(config)#ip ssh authentication-retries 2<br>
+   csr10(config)#ip ssh time-out 60<br>
 <b>change italic values between <font color="red">""</font> to your own settings</b><br>
 </blockquote>
 <!-- blank -->

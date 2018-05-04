@@ -9,7 +9,7 @@ on the other I think it makes for more streamlined and easier playbooks.
 But it does mean a more hands-on approach to the intial router setup...before we can get to work using Ansible with the routers.
 <font size="5" color="blue">Provisioning the CSR1000v in esxi</font>
 <blockquote>
-   <a href="https://www.cisco.com/c/en/us/td/docs/routers/csr1000/software/configuration/b_CSR1000v_Configuration_Guide/b_CSR1000v_Configuration_Guide_chapter_011.pdf">Cisco CSR1000v Install Guide for esxi Environment</a>
+   Link to <a href="https://www.cisco.com/c/en/us/td/docs/routers/csr1000/software/configuration/b_CSR1000v_Configuration_Guide/b_CSR1000v_Configuration_Guide_chapter_011.pdf">Cisco CSR1000v Install Guide for esxi Environment</a>
 </blockquote>
  In order to set up the router with the minimum configuraiton to allow ssh communicaiton from the Ansible Host machine, the configuration below must be applied to each CSR1000v router.<br>
 My appraoch to provisioning the routers is to do them on a site by site basis as follows:

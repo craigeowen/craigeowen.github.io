@@ -1,6 +1,7 @@
 I am writing about network automation. but there is definitely a need
 to use end hosts. So given that this entire lab is virtualised it is
 easy to spin up end nodes as test targets. So this lab will prepare the groundwork by creating the linux machine hosting the ansible applicaiton, and the site linux endpoints...please refer to last weeks blog for details of the <a href="https://craigeowen.github.io/blog/2018/04/06/Lab-environment">lab environment</a><br>
+The Labs page Reource section has links to the resource files used throughout the various labe, or alternatively go directly to <a href="https://github.com/craigeowen/my-network-ansible_playbooks">my-network-ansible_playbook</a> GitHub repository.
 <font size="5" color="blue">Linux Initial Setup</font>
 <blockquote>
    <b>Ansible admin node</b><br>

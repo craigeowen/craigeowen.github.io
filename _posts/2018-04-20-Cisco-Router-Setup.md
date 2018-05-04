@@ -6,7 +6,7 @@ The gotcha with the CSR router is that it requires 4Gb RAM, but so far these hav
 Natively ansible connects to a host on ssh and then utilises the python interpreter to compile and run the plays. 
 However this is not possible on a Cisco router so on the one hand it is less elegent and has a more limited set of modules, 
 on the other I think it makes for more streamlined and easier playbooks.
-
+But it does mean a more hands-on approach to the intial router setup...before we can get to work using Ansible with the routers.
 <!--
 I am writing about network automation. but there is definitely a need
 to use end hosts. So given that this entire lab is virtualised it is

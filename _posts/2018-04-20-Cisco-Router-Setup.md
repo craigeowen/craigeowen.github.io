@@ -7,8 +7,9 @@ Natively ansible connects to a host on ssh and then utilises the python interpre
 However this is not possible on a Cisco router so on the one hand it is less elegent and has a more limited set of modules, 
 on the other I think it makes for more streamlined and easier playbooks.
 But it does mean a more hands-on approach to the intial router setup...before we can get to work using Ansible with the routers.
-<!--
-I am writing about network automation. but there is definitely a need
+
+
+<-- I am writing about network automation. but there is definitely a need
 to use end hosts. So given that this entire lab is virtualised it is
 easy to spin up end nodes as test targets. So this lab will prepare the groundwork by creating the linux machine hosting the ansible applicaiton, and the site linux endpoints...please refer to last weeks blog for details of the <a href="https://craigeowen.github.io/blog/2018/04/06/Lab-environment">lab environment</a><br>
 The <a href="https://craigeowen.github.io/ansible/">Labs</a> page <b>Resource</b> section has links to the resource files used throughout the various lab, or alternatively go directly to <a href="https://github.com/craigeowen/my-network-ansible_playbooks">my-network-ansible_playbook</a> GitHub repository.
@@ -87,5 +88,5 @@ Example from my inventory (hosts.yml)<br>
 <img src="/assets/lab1-ansible_ping.PNG" alt="Ansible Pingt" style="width:400px;height:150px;">
 </blockquote>
 <b><font size="10" color="blue">Success!!!</font></b>
-<br>
--->
+<br> -->
+

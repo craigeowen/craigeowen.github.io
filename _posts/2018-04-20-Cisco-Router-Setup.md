@@ -46,10 +46,11 @@ console
    csr10(config)#ip ssh version 2<br>
    csr10(config)#ip ssh authentication-retries 2<br>
    csr10(config)#ip ssh time-out 60<br>
+   <br>
 <b>change italic values between <font color="red">""</font> to your own settings</b><br>
 </blockquote>
 <!-- blank -->
-For the initial provisioning and testing I put the CSR routers in the VLAN10 port group in order to carry out connectivity testing. So now lets test connectivity.<br>
+The final desing has the RHEL7 ansible host in the VLAN10 port group together with CSR10 & 11. So lets move the RHEL7 machine into the VLAN10 port Group. So now lets test connectivity.<br>
 <br>
 <font size="5" color="blue">Procedure to confirm Cisco connectivity</font>
 <blockquote>

@@ -41,6 +41,7 @@ Example from my inventory (hosts.yml)<br>
 <br>
 172.16.20.2 ansible_user=test2 ansible_ssh_pass=p4ssw0rd!<br>
 <!-- screenshot to add above -->
+   AAAAAAA
 ![My hosts.yml Inventory File]({{ "/assets/lab1-hostsfile.PNG" | absolute_url }})
 </blockquote>
 <!-- blank -->

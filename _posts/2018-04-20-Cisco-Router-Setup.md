@@ -50,14 +50,14 @@ console
 <b>change italic values between <font color="red">""</font> to your own settings</b><br>
 </blockquote>
 <!-- blank -->
-The final desing has the RHEL7 ansible host in the VLAN10 port group together with CSR10 & 11. So lets move the RHEL7 machine into the VLAN10 port Group. So now lets test connectivity.<br>
+The final desing has the RHEL7 ansible host in the VLAN10 port group together with CSR10 & 11. So lets move the RHEL7 machine into the VLAN10 port Group. So now lets test connectivity.
 <br>
 <font size="5" color="blue">Procedure to confirm Cisco connectivity</font>
 <blockquote>
 1. First ping to ip address to confirm connectivity
-<br>    
+<img src="/assets/lab2-ping.PNG" alt=Router Ping style="width:400px;height:150px;">    
 2. Then ssh to the routers
-<br>    
+<img src="/assets/lab2-ssh.PNG" alt="Router SSH" style="width:400px;height:150px;">     
 </blockquote>
 Once ssh access works, then the router is ready.
 

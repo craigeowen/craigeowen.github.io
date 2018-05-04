@@ -41,8 +41,9 @@ Example from my inventory (hosts.yml)<br>
 <br>
 172.16.20.2 ansible_user=test2 ansible_ssh_pass=p4ssw0rd!<br>
 <!-- screenshot to add above -->
-   BBBBB
-[My hosts.yml Inventory File]({{ "/assets/lab1-hostsfile.PNG" | absolute_url }})
+   CCCCCC
+<!-- <img src="img_girl.jpg" alt="Girl in a jacket" style="width:500px;height:600px;"> -->
+<img src="/assets/lab1-hostsfile.PNG">alt="My hosts.yml Inventory File"style="width:500px;height:600px;">
 </blockquote>
 <!-- blank -->
 <font size="5" color="blue">Procedure to confirm ansible is working correctly</font>

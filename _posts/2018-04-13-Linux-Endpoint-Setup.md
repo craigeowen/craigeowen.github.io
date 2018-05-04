@@ -28,8 +28,9 @@ easy to spin up end nodes as test targets. So this lab will prepare the groundwo
    <b>Once again it is really important that ssh is working correctly as ansible will only communicate over ssh!!!</b><br>
 </blockquote>
  
- It is also a really good idea to test ansible against each node. So it is time to create a first basic inventory file to allow basic testing, as follows:<br>
-<font size="6" color="green">Create a host.yml file</font><br>
+Now that these linux machines are set up and communicating on the VM Network Port Group, we can test that Ansible is working by doing some very basic tests. So it is time to create a first basic inventory file to allow basic testing between the RHEL7 ansible host machine and the ubuntu endpoints, as follows:<br>
+<font size="4" color="blue">Create a host.yml file</font><br>
+<blockquote>
 "<i>ip address of host</i>" ansible_user="<i>username</i>" ansible_password="<i>password</i>"<br>
 <b>change values between <font clour="red">""</font> to your own settings</b><br>
   
@@ -39,6 +40,7 @@ easy to spin up end nodes as test targets. So this lab will prepare the groundwo
   Example from my inventory (hosts.yml)<br>   
  172.16.20.2 ansible_user=test2 ansible_ssh_pass=p4ssw0rd!<br>
 <!-- screenshot to add above -->
+</blockquote>
 <!-- blank -->
 <font size="6" color="blue">Procedure to confirm ansible is working correctly</font>
 <font size="4" colour=blue">

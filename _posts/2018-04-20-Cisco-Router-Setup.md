@@ -55,7 +55,7 @@ The final desing has the RHEL7 ansible host in the VLAN10 port group together wi
 <font size="5" color="blue">Procedure to confirm Cisco connectivity</font>
 <blockquote>
 1. First ping to ip address to confirm connectivity
-<img src="/assets/lab2-ping.PNG" alt=Router Ping style="width:400px;height:150px;">    
+<img src="/assets/lab2-ping.PNG" alt=Router Ping" style="width:400px;height:150px;">    
 2. Then ssh to the routers
 <img src="/assets/lab2-ssh.PNG" alt="Router SSH" style="width:400px;height:150px;">     
 </blockquote>

@@ -55,7 +55,6 @@ Example from my inventory (hosts.yml)<br>
 <br>    
 5. Then from the ansible host cli run the following: ansible all -m ping
 </blockquote>
-<br>
 <font size="5" color="blue">Below is an example of the 5 step "Procedure to confirm ansible is working correctly".</font>
 <blockquote>
 <b>1. Ping host</b><br>

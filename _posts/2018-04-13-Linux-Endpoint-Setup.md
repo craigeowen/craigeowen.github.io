@@ -61,6 +61,7 @@ Example from my inventory (hosts.yml)<br>
 <font size="5" color="blue">Below is an example of the 5 step "Procedure to confirm ansible is working correctly".</font>
 <blockquote>
 <b>1. Ping host</b><br>
+<img src="/assets/lab1-ping.PNG" alt="Ping ubuntu endpoint" style="width:400px;height:150px;">
 [red1@localhost ~]$ ping 172.16.20.2<br>
 PING 172.16.20.2 (172.16.20.2) 56(84) bytes of data.<br>
 64 bytes from 172.16.20.2: icmp_seq=1 ttl=60 time=1.00 ms<br>
@@ -72,6 +73,7 @@ PING 172.16.20.2 (172.16.20.2) 56(84) bytes of data.<br>
 rtt min/avg/max/mdev = 0.781/0.893/1.008/0.098 ms<br>
 <br>
 <b>2. SSH to host</b><br>
+<img src="/assets/lab1-ssh.PNG" alt="SSH to ubuntu endpoint" style="width:400px;height:150px;">
 [red1@localhost ~]$ ssh test2@172.16.20.2<br>
 The authenticity of host '172.16.20.2 (172.16.20.2)' can't be established.<br>
 ECDSA key fingerprint is SHA256:F3Zjwy3FUe0z2+6bck9Kr/SVWDL6UlDR60TVYdNkWTU.<br>
@@ -91,6 +93,7 @@ Welcome to Ubuntu 16.04.4 LTS (GNU/Linux 4.13.0-38-generic x86_64)
 Last login: Wed Apr 18 08:49:54 2018 from 172.16.10.20<br>
 <br>
 <b>3. Return to Ansible host</b><br>
+<img src="/assets/lab1-exit.PNG" alt="Return back to Ansible host" style="width:400px;height:150px;">
 test2@test2:~$ exit<br>
 logout<br>
 Connection to 172.16.20.2 closed.<br>
@@ -98,11 +101,11 @@ Connection to 172.16.20.2 closed.<br>
 [red1@localhost ~]$ <br>
 <br>
 <b>4. Now change directory to /etc/ansible</b><br>
-<br>
+<img src="/assets/lab1-cd_to_ansible.PNG" alt="CD to /etc/ansible" style="width:400px;height:150px;">
 [red1@localhost ~]$ cd /etc/ansible<br>
 <br>
 <b>5. Run ansible ping</b><br>
-<br>
+<img src="/assets/lab1-ansibel_ping.PNG" alt="Ansible Pingt" style="width:400px;height:150px;">
 [red1@localhost ansible]$ ansible all -m ping<br>
 172.16.20.2 | SUCCESS => {<br>
     "changed": false, <br>

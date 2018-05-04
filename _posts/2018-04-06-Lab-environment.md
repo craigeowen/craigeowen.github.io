@@ -7,7 +7,8 @@ date: 2018-04-06
 The great thing about building labs today is that it is pretty easy to virtualise most components. 
 Therefore I have set out to build this lab entirely in a VMWare ESXi host. 
 At first I started out building things in Virtual Box on my laptop, but a Cisco CSR1000v requires 4Gb RAM, so this soon outgrew my laptops resources.
-Luckily I have a pretty good VMWare host so it makes so much more sense to use it as I decided that this was going to be a much longer term project than I had first envisaged.
+Luckily I have a pretty good VMWare host so it makes so much more sense to use it as I decided that this was going to be a much longer term project than I had first envisaged.<br>
+The lab will be built from the ground up during the course of the various labs, this is the link to the final <a href="https://github.com/craigeowen/my-network-ansible_playbooks/blob/master/2b.%20Laptop_Lab_JPEG.jpg">lap topology drawing</a>
 
 My VMWare hosts is spec'd as follows:<br>
 Dell Precision T3600<br>

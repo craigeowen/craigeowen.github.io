@@ -1,7 +1,7 @@
 I am writing about network automation. but there is definitely a need
 to use end hosts. So given that this entire lab is virtualised it is
 easy to spin up end nodes as test targets. So this lab will prepare the groundwork by creating the linux machine hosting the ansible applicaiton, and the site linux endpoints...please refer to last weeks blog for detials of the <a href="https://craigeowen.github.io/blog/2018/04/06/Lab-environment">lab environment</a><br>
-<font size="4" color="blue">Linux Initial Setup</font><br>
+<font size="5" color="blue">Linux Initial Setup</font>
 <blockquote>
    <b>Ansible admin node</b><br>
    I started out by running ansible on an ubuntu linux distro. However I
@@ -25,11 +25,11 @@ easy to spin up end nodes as test targets. So this lab will prepare the groundwo
    I made sure to start out with all the linux nodes connected to the
    VM Network port group in order to carry out updates and quickly test
    ssh works between the ansible admin node and each of the site nodes. <br>
-   <b>Once again it is really important that ssh is working correctly as ansible will only communicate over ssh!!!</b><br>
+   <b>Once again! It is really important that ssh is working correctly as ansible will only communicate over ssh!!!</b><br>
 </blockquote>
  
 Now that these linux machines are set up and communicating on the VM Network Port Group, we can test that Ansible is working by doing some very basic tests. So it is time to create a first basic inventory file to allow basic testing between the RHEL7 ansible host machine and the ubuntu endpoints, as follows:<br>
-<font size="4" color="blue">Create a host.yml file</font><br>
+<font size="5" color="blue">Create a host.yml file</font>
 <blockquote>
 "<i>ip address of host</i>" ansible_user="<i>username</i>" ansible_password="<i>password</i>"<br>
 <b>change values between <font clour="red">""</font> to your own settings</b><br>
@@ -42,8 +42,8 @@ Now that these linux machines are set up and communicating on the VM Network Por
 <!-- screenshot to add above -->
 </blockquote>
 <!-- blank -->
-<font size="6" color="blue">Procedure to confirm ansible is working correctly</font>
-<font size="4" colour=blue">
+<font size="5" color="blue">Procedure to confirm ansible is working correctly</font>
+<blockquote>
 1. First ping to ip address to confirm connectivity
 <br>    
 2. Then ssh to linux host with username from above
@@ -53,7 +53,7 @@ Now that these linux machines are set up and communicating on the VM Network Por
 4. cd to /etc/ansible
 <br>    
 5. Then from the ansible host cli run the following: ansible all -m ping
-</font>
+</blockquote>
 <br>
 
 <b>Worked Example</b><br>

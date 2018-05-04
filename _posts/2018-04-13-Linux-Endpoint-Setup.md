@@ -56,8 +56,8 @@ Example from my inventory (hosts.yml)<br>
 5. Then from the ansible host cli run the following: ansible all -m ping
 </blockquote>
 <br>
-Below is an example of running a successful Ansible test against an ubuntu endpoint.<br>
-<font size="5" color="blue">Worked Example</font><br>
+<font size="5" color="blue">Below is an example of the 5 step "Procedure to confirm ansible is working correctly".</font><br>
+
 <b>1. Ping host</b><br>
 [red1@localhost ~]$ ping 172.16.20.2<br>
 PING 172.16.20.2 (172.16.20.2) 56(84) bytes of data.<br>

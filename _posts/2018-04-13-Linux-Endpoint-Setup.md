@@ -7,7 +7,7 @@ easy to spin up end nodes as test targets. So this lab will prepare the groundwo
    suffered endlessly from stability issues so switched to using RHEL7.
    This I sourced from RedHat using the free 
    <a href="https://developers.redhat.com/blog/2016/03/31/no-cost-rhel-developer-subscription-now-available/">RHEL Developers 
-   subscription</a>
+   subscription</a><br>
    <br>
    Follow the install guide and make sure to add the dependent repos.
    <br>
@@ -19,12 +19,12 @@ easy to spin up end nodes as test targets. So this lab will prepare the groundwo
    </font>
    <br>
    <b>Ubuntu - site nodes</b> (as I had already deployed these)<br>
-   Standard ubuntu install running either 16.04LTS or 17.10, please make sure ssh is set up!
+   Standard ubuntu install running either 16.04LTS or 17.10, <b>please make sure ssh is set up!</b><br>
    <br>
    I made sure to start out with all the linux nodes connected to the
    VM Network port group in order to carry out updates and quickly test
    ssh works between the ansible admin node and each of the site nodes. <br>
-   <b>This is really important as ansible will only work over ssh!!!</b><br>
+   <b>Once again it is really important that ssh is working correctly as ansible will only communicate over ssh!!!</b><br>
 </blockquote>
  
  It is also a really good idea to test ansible against each node. So it is time to create a first basic inventory file to allow basic testing, as follows:<br>

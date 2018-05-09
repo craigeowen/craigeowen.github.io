@@ -29,7 +29,7 @@ p {
     color: #333;
 }
 header {
-    background-color: #333;
+    background-color: #a3a3c2;
 }
 footer {
     border-top: 1px solid #d5d5d5;
@@ -53,7 +53,7 @@ ul.posts li {
     z-index: 1; /* Stay on top */
     top: 0; /* Stay at the top */
     left: 0;
-    background-color: #333 /* #111;  Black */
+    background-color: #a3a3c2 /* #111;  Black */
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 20px;
 }

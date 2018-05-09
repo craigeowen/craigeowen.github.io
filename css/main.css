@@ -28,6 +28,8 @@ p {
     line-height: 1.4em;
     color: #333;
 }
+header {
+    background-color: #333;
 footer {
     border-top: 1px solid #d5d5d5;
     font-size: .8em;
@@ -50,7 +52,7 @@ ul.posts li {
     z-index: 1; /* Stay on top */
     top: 0; /* Stay at the top */
     left: 0;
-    background-color: #00e1e1 /* #111;  Black */
+    background-color: #333 /* #111;  Black */
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 20px;
 }
@@ -60,7 +62,7 @@ ul.posts li {
     padding: 6px 8px 6px 16px;
     text-decoration: none;
     font-size: 25px;
-    color: #818181;
+    color: white /* #818181 */;
     display: block;
 }
 

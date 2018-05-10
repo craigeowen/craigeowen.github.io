@@ -11,7 +11,8 @@ notes: active
 </div>
 -->
 
-<div class="notes">
+<!-- 
+	<div class="notes">
 		<div class="note single">
 			<h1 class="title">{{ page.title }}</h1>
 			
@@ -19,20 +20,25 @@ notes: active
 				{{ page.date | date_to_string }} {% if page.author %} by {{ page.author }} {% endif %}
 			</info></h2>
 			<!-- Post content -->
+<!--
 			<div class="notebody">
 				{{ content }}
 			</div>
 			<!-- Post info -->
+<!-- 
 			<div class="noteinfo">
 			<!-- include some categories and tags maybe? -->
+<!--
 			</div>
 
 			<hr>
-
+-->
 			<!-- Post comments -->
+<!--
 			<div class="notecomments">
-				{% include disqus.html %}
-				<!-- {% if page.comments %}
+				{% include disqus.html %} 
+-->
+				{% if page.comments %}
 				
 				<div id="disqus_thread"></div>
 				<script>

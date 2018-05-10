@@ -8,9 +8,12 @@ notes: active
 
 <div class="post">
   {{ content }}
-<!-- </div> -->
+</div>
 
-
+<!-- Post comments -->
+<div class="notecomments">
+				{% include disqus.html %}	 
+  
 {% if page.comments %}
 
 <div id="disqus_thread"></div>

@@ -5,6 +5,7 @@ permalink: /blog/:year/:month/:day/:title
 twitter_username:     my_net_auto
 github_username:      craigeowen
 linkedin_username:    craig-owen-aa62ab1
+email_username:       my.network.automation@gmail.com
 
 plugins:
   - jekyll-sitemap

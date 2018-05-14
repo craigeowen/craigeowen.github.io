@@ -45,9 +45,18 @@
 			</div><!-- /.container -->
 			<footer>
 	    		<ul>
-	        		<li><a href="mailto:my.network.automation@gmail.com">email</a></li><br>
-				
-	        		<li><a href="https://github.com/craigeowen/my-network-ansible_playbooks">github.com/my-network-ansible_playbooks</a></li>
+	        		<!-- 
+				<li><a href="mailto:my.network.automation@gmail.com">email</a></li><br>
+				<li><a href="https://github.com/craigeowen/my-network-ansible_playbooks">github.com/my-network-ansible_playbooks</a></li>
+				-->				
+
+				{% if site.email_username %}
+				  <li>
+				    <a href="mailto:my.network.automation@gmail.com/{{ site.email_username }}">
+				      <i class="fa fa-email"></i> email
+				    </a>
+				  </li>
+				{% endif %}
 				
 				{% if site.twitter_username %}
 				  <li>

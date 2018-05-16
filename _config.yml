@@ -9,3 +9,5 @@ linkedin_username:    craig-owen-aa62ab1
 
 plugins:
   - jekyll-sitemap
+
+theme: jekyll-theme-slate
